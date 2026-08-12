@@ -1,0 +1,1 @@
+export const ads = { enabled: false, publisher: '', slots: { home: '', tool: '' } };

@@ -1,0 +1,986 @@
+Build a complete production-ready web application called "ToolNova".
+
+ToolNova is a free online tools website designed to attract organic Google traffic through useful, fast and genuinely functional browser-based tools.
+
+IMPORTANT:
+This is NOT a landing page or visual prototype.
+
+Build a REAL working website.
+
+Every tool included in this first version must actually work. Do not create fake buttons, fake processing or placeholder functionality.
+
+The architecture must be modular so that many more tools can be added later without redesigning the application.
+
+==================================================
+1. TECHNOLOGY
+==================================================
+
+Use:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- Lucide React icons
+
+Use clean, scalable and maintainable code.
+
+The website must be easy for another AI coding assistant to understand and modify later.
+
+Prefer client-side processing whenever possible.
+
+Do not add a database or authentication system in this first version.
+
+==================================================
+2. BRAND
+==================================================
+
+Website name:
+
+ToolNova
+
+Tagline:
+
+"Free Online Tools for Everyone"
+
+Create a professional visual identity.
+
+The design should be:
+
+- modern
+- clean
+- minimal
+- professional
+- fast
+- trustworthy
+- mobile-first
+- responsive
+- visually polished
+
+Avoid the typical generic AI-generated website appearance.
+
+==================================================
+3. MAIN NAVIGATION
+==================================================
+
+Create a responsive navigation bar.
+
+Logo:
+
+ToolNova
+
+Navigation links:
+
+Home
+All Tools
+Images
+PDF
+Text
+Developer
+Calculators
+
+Include:
+
+- Global search
+- Dark/light mode toggle
+
+On mobile use a hamburger menu.
+
+==================================================
+4. HOMEPAGE
+==================================================
+
+Create a professional homepage.
+
+Hero section:
+
+Title:
+
+"Free Online Tools for Everything"
+
+Subtitle:
+
+"Fast, simple and powerful tools for images, PDFs, text, developers and everyday calculations."
+
+Add a large search box:
+
+"Search for a tool..."
+
+Below it show popular tools:
+
+Image Compressor
+Image Resizer
+JPG to PNG
+PDF Merger
+JPG to PDF
+Word Counter
+JSON Formatter
+Password Generator
+Percentage Calculator
+Age Calculator
+
+Create a "Browse Tools" section.
+
+Create category sections for:
+
+Images
+PDF
+Text
+Developer
+Calculators
+
+Each category should display several tool cards.
+
+==================================================
+5. FIRST VERSION TOOL LIST
+==================================================
+
+ONLY implement the following tools in this first version.
+
+Do NOT create fake pages for tools that are not implemented.
+
+------------------------------
+IMAGE TOOLS
+------------------------------
+
+1. Image Compressor
+
+Features:
+
+- Upload JPG, PNG or WebP
+- Drag and drop
+- Image preview
+- Original file size
+- Quality slider
+- Compression percentage
+- Compressed file size
+- Download compressed image
+
+Process images entirely in the browser.
+
+2. Image Resizer
+
+Features:
+
+- Upload image
+- Preview
+- Width
+- Height
+- Maintain aspect ratio checkbox
+- Resize
+- Download
+
+3. JPG to PNG
+
+Features:
+
+- Upload JPG
+- Preview
+- Convert
+- Download PNG
+
+4. PNG to JPG
+
+Features:
+
+- Upload PNG
+- Preview
+- Choose JPG quality
+- Convert
+- Download JPG
+
+5. Image Cropper
+
+Features:
+
+- Upload image
+- Interactive crop area
+- Width/height information
+- Crop
+- Download
+
+6. WebP Converter
+
+Support:
+
+JPG → WebP
+PNG → WebP
+
+Allow quality adjustment.
+
+7. Image to Base64
+
+Features:
+
+- Upload image
+- Generate Base64
+- Display result
+- Copy button
+- Download text
+
+8. QR Code Generator
+
+Features:
+
+- Text input
+- URL input
+- Generate QR code
+- Download PNG
+- Clear button
+
+------------------------------
+PDF TOOLS
+------------------------------
+
+9. PDF Merger
+
+Allow users to:
+
+- Upload multiple PDFs
+- Display selected files
+- Reorder files
+- Merge PDFs
+- Download merged PDF
+
+10. PDF Splitter
+
+Allow users to:
+
+- Upload PDF
+- Display page count
+- Select pages/ranges
+- Create new PDF
+- Download
+
+11. PDF to JPG
+
+Allow users to:
+
+- Upload PDF
+- Display pages
+- Convert selected pages to JPG
+- Download images
+
+12. JPG to PDF
+
+Allow:
+
+- Multiple image uploads
+- Reordering
+- Image preview
+- Create PDF
+- Download PDF
+
+13. PDF Page Extractor
+
+Allow users to:
+
+- Upload PDF
+- Select pages
+- Extract selected pages
+- Download resulting PDF
+
+------------------------------
+TEXT TOOLS
+------------------------------
+
+14. Word Counter
+
+Show in real time:
+
+- Words
+- Characters
+- Characters excluding spaces
+- Sentences
+- Paragraphs
+- Reading time
+
+15. Case Converter
+
+Include:
+
+- UPPERCASE
+- lowercase
+- Title Case
+- Sentence case
+- Capitalize Each Word
+
+Add:
+
+Copy
+Clear
+
+16. Remove Duplicate Lines
+
+Features:
+
+- Large text input
+- Remove duplicate lines
+- Preserve order
+- Option to ignore empty lines
+- Copy result
+- Download result
+
+17. Text to Slug
+
+Example:
+
+"My Amazing Online Tool"
+
+becomes:
+
+"my-amazing-online-tool"
+
+Include:
+
+- Input
+- Slug output
+- Copy button
+- Clear button
+
+18. Password Generator
+
+Features:
+
+- Password length
+- Uppercase
+- Lowercase
+- Numbers
+- Symbols
+- Generate button
+- Copy button
+- Password strength indicator
+
+Passwords must be generated securely using browser cryptographic APIs when available.
+
+------------------------------
+DEVELOPER TOOLS
+------------------------------
+
+19. JSON Formatter
+
+Features:
+
+- JSON input editor
+- Format
+- Minify
+- Validate
+- Copy
+- Clear
+- Download
+
+Show useful validation errors.
+
+20. Base64 Encoder / Decoder
+
+Create a tool with two modes:
+
+Encode
+Decode
+
+Features:
+
+- Input
+- Output
+- Copy
+- Clear
+
+Handle Unicode correctly.
+
+==================================================
+6. TOOL ARCHITECTURE
+==================================================
+
+Create a centralized tool registry.
+
+For example:
+
+src/data/tools.ts
+
+Each tool should contain:
+
+id
+name
+slug
+category
+description
+icon
+keywords
+component
+seoTitle
+seoDescription
+
+The registry should be used to automatically generate:
+
+- tool cards
+- search results
+- category pages
+- related tools
+- navigation
+- sitemap data
+
+Make it extremely easy to add new tools later.
+
+==================================================
+7. URL STRUCTURE
+==================================================
+
+Each tool must have its own clean SEO-friendly URL.
+
+Examples:
+
+/tools/image-compressor
+/tools/image-resizer
+/tools/jpg-to-png
+/tools/png-to-jpg
+/tools/image-cropper
+/tools/webp-converter
+/tools/image-to-base64
+/tools/qr-code-generator
+
+/tools/pdf-merger
+/tools/pdf-splitter
+/tools/pdf-to-jpg
+/tools/jpg-to-pdf
+/tools/pdf-page-extractor
+
+/tools/word-counter
+/tools/case-converter
+/tools/remove-duplicate-lines
+/tools/text-to-slug
+/tools/password-generator
+
+/tools/json-formatter
+/tools/base64-encoder-decoder
+
+Do not use URLs such as:
+
+/tool?id=123
+
+==================================================
+8. ALL TOOLS PAGE
+==================================================
+
+Create:
+
+/tools
+
+Display every currently implemented tool.
+
+Include:
+
+- Search
+- Category filters
+- Tool cards
+
+Each card must contain:
+
+Icon
+Tool name
+Description
+Category
+Open Tool button
+
+==================================================
+9. GLOBAL SEARCH
+==================================================
+
+Create a fast client-side search.
+
+Search by:
+
+- Tool name
+- Description
+- Keywords
+- Category
+
+Examples:
+
+Searching "compress" should show:
+
+Image Compressor
+
+Searching "pdf" should show all PDF tools.
+
+Searching "json" should show JSON Formatter.
+
+Add keyboard accessibility.
+
+==================================================
+10. TOOL PAGE DESIGN
+==================================================
+
+Every tool page must use the same professional structure.
+
+Example:
+
+Breadcrumb
+
+Tool title
+
+Short description
+
+Tool interface
+
+Features
+
+How to use
+
+FAQ
+
+Related Tools
+
+SEO content
+
+The actual tool must be the main focus of the page.
+
+Do not put excessive text above the tool.
+
+==================================================
+11. FILE UPLOAD UX
+==================================================
+
+For file-based tools create a reusable FileUploader component.
+
+Support:
+
+- Drag and drop
+- Click to upload
+- File validation
+- File type validation
+- File size validation
+- Upload progress/status
+- Remove file
+- Error messages
+
+Make it excellent on mobile.
+
+==================================================
+12. PRIVACY
+==================================================
+
+Whenever technically possible, process files entirely in the browser.
+
+Do not upload user files to a server unnecessarily.
+
+Display a small privacy message on file-processing tools:
+
+"Your files are processed locally in your browser whenever possible."
+
+Do not store user files.
+
+==================================================
+13. SEO
+==================================================
+
+SEO is one of the most important parts of this project.
+
+Every tool page must have unique:
+
+- Title
+- Meta description
+- Canonical URL
+- Open Graph metadata
+
+Example:
+
+Title:
+
+"Free Image Compressor Online – Compress JPG, PNG & WebP | ToolNova"
+
+Description:
+
+"Compress JPG, PNG and WebP images online for free. Reduce image file size while maintaining quality."
+
+Do not duplicate metadata between pages.
+
+Do not keyword stuff.
+
+Each page must contain genuinely useful content.
+
+==================================================
+14. TOOL SEO CONTENT
+==================================================
+
+Every tool page should include:
+
+H1
+Short introduction
+How the tool works
+How to use
+Features
+Supported formats where applicable
+Privacy information
+FAQ
+Related tools
+
+Create useful, natural language content.
+
+Do not create generic AI filler text.
+
+==================================================
+15. STRUCTURED DATA
+==================================================
+
+Implement appropriate Schema.org structured data where applicable.
+
+Use:
+
+WebApplication
+BreadcrumbList
+FAQPage
+
+when appropriate.
+
+==================================================
+16. SITEMAP
+==================================================
+
+Create a sitemap.xml containing all implemented tool pages.
+
+Make it easy to update automatically when new tools are added.
+
+Create robots.txt.
+
+==================================================
+17. PERFORMANCE
+==================================================
+
+Optimize heavily for performance.
+
+Use:
+
+- Lazy loading
+- Code splitting
+- Dynamic imports
+- Tool-specific dependencies loaded only when required
+- Optimized assets
+- Minimal unnecessary JavaScript
+
+Do not load large PDF/image processing libraries globally if they are only needed on one tool page.
+
+==================================================
+18. DARK MODE
+==================================================
+
+Implement a professional dark mode.
+
+Save the user's preference in localStorage.
+
+Ensure both themes have excellent readability and contrast.
+
+==================================================
+19. RESPONSIVE DESIGN
+==================================================
+
+The entire website must work perfectly on:
+
+- Android phones
+- iPhones
+- Tablets
+- Laptops
+- Desktop computers
+
+Mobile experience is extremely important.
+
+==================================================
+20. ACCESSIBILITY
+==================================================
+
+Implement:
+
+- Semantic HTML
+- ARIA labels where appropriate
+- Keyboard navigation
+- Visible focus states
+- Accessible forms
+- Good color contrast
+- Proper heading hierarchy
+
+==================================================
+21. ADVERTISEMENT SYSTEM
+==================================================
+
+The website will eventually be monetized with advertising.
+
+DO NOT insert real advertisements yet.
+
+Create a reusable component:
+
+AdSlot
+
+Possible locations:
+
+- Below navigation
+- Homepage between sections
+- Inside tool pages
+- Before FAQ
+- Before Related Tools
+
+The AdSlot component should be easy to replace later with:
+
+Google AdSense
+Adsterra
+Monetag
+
+Do not hard-code advertising scripts throughout the application.
+
+Create:
+
+src/config/ads.ts
+
+for future ad configuration.
+
+Make sure advertisements will not interfere with the functionality of the tools.
+
+==================================================
+22. RELATED TOOLS
+==================================================
+
+At the bottom of every tool page show related tools.
+
+Examples:
+
+Image Compressor:
+
+Image Resizer
+JPG to PNG
+PNG to JPG
+WebP Converter
+Image Cropper
+
+PDF Merger:
+
+PDF Splitter
+PDF Page Extractor
+PDF to JPG
+JPG to PDF
+
+Word Counter:
+
+Case Converter
+Text to Slug
+Remove Duplicate Lines
+
+Use category and keyword matching from the tool registry.
+
+==================================================
+23. HOMEPAGE SECTIONS
+==================================================
+
+Homepage structure:
+
+1. Navigation
+2. Hero
+3. Search
+4. Popular Tools
+5. Categories
+6. Why ToolNova?
+7. Featured Tools
+8. FAQ
+9. Footer
+
+"Why ToolNova?" features:
+
+Free to use
+No registration
+Fast
+Privacy focused
+Browser-based
+Mobile friendly
+
+==================================================
+24. FOOTER
+==================================================
+
+Create a professional footer.
+
+Sections:
+
+Tools
+Categories
+Company
+Legal
+
+Links:
+
+All Tools
+Image Tools
+PDF Tools
+Text Tools
+Developer Tools
+Calculators
+
+About
+Contact
+Privacy Policy
+Terms of Service
+Cookie Policy
+
+==================================================
+25. LEGAL PAGES
+==================================================
+
+Create:
+
+/about
+/contact
+/privacy-policy
+/terms
+/cookie-policy
+
+Use professional placeholder content that I can customize later.
+
+==================================================
+26. NO LOGIN
+==================================================
+
+Do not require registration.
+
+Users should be able to use all tools immediately.
+
+==================================================
+27. ERROR HANDLING
+==================================================
+
+Every tool must gracefully handle:
+
+- Empty input
+- Invalid input
+- Unsupported file types
+- Corrupted files
+- Excessively large files
+- Processing errors
+
+Never allow the application to crash because of bad user input.
+
+==================================================
+28. VISUAL DETAILS
+==================================================
+
+Use:
+
+- Consistent spacing
+- Professional cards
+- Subtle shadows
+- Rounded corners
+- Clear hierarchy
+- High-quality icons
+- Smooth but subtle animations
+
+Do not overuse animations.
+
+The interface should feel fast.
+
+==================================================
+29. IMPORTANT FUNCTIONALITY RULE
+==================================================
+
+Never create fake functionality.
+
+If a button says:
+
+"Compress"
+
+it must compress.
+
+If it says:
+
+"Convert"
+
+it must convert.
+
+If it says:
+
+"Download"
+
+it must download the actual generated file.
+
+If something cannot be implemented completely with the available browser technologies, do not pretend that it works.
+
+==================================================
+30. FUTURE EXPANSION
+==================================================
+
+The architecture must allow me to add many more tools later.
+
+Future categories will include:
+
+Video Tools
+More Image Tools
+More PDF Tools
+More Developer Tools
+More Calculators
+Utilities
+Converters
+
+Do not build these future tools now.
+
+Only build the 20 tools specified in this prompt.
+
+==================================================
+31. FINAL TESTING
+==================================================
+
+Before finishing:
+
+Test every tool.
+
+Test file uploads.
+
+Test file downloads.
+
+Test image conversions.
+
+Test PDF operations.
+
+Test calculators where applicable.
+
+Test JSON validation.
+
+Test Base64 encoding/decoding.
+
+Test password generation.
+
+Test search.
+
+Test navigation.
+
+Test every URL.
+
+Test dark mode.
+
+Test mobile layout.
+
+Test responsive design.
+
+Check for TypeScript errors.
+
+Check for console errors.
+
+Check for broken links.
+
+Check that there are no fake buttons.
+
+Make sure the application builds successfully.
+
+==================================================
+32. FINAL RESULT
+==================================================
+
+The final result must feel like a real professional online tools platform that could eventually receive millions of organic visitors.
+
+Do not make it look like an unfinished prototype.
+
+Focus on:
+
+REAL FUNCTIONALITY
+SEO
+PERFORMANCE
+MOBILE EXPERIENCE
+PRIVACY
+SCALABILITY
+PROFESSIONAL DESIGN
+
+Start by creating the core architecture and homepage, then implement the 20 tools listed above.

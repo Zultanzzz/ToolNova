@@ -1,0 +1,39 @@
+import type { LucideIcon } from 'lucide-react';
+import { FileJson, FileOutput, FileText, Image, KeyRound, QrCode, ScanLine, SlidersHorizontal, Type, Braces, Files, Crop, RefreshCw, Maximize2, Binary } from 'lucide-react';
+
+export type ToolCategory = 'Images' | 'PDF' | 'Text' | 'Developer';
+export type Tool = {
+  id: string; name: string; slug: string; category: ToolCategory; description: string;
+  icon: LucideIcon; keywords: string[]; seoTitle: string; seoDescription: string;
+};
+
+export const tools: Tool[] = [
+  { id:'image-compressor', name:'Image Compressor', slug:'image-compressor', category:'Images', description:'Shrink JPG, PNG and WebP files while keeping them crisp.', icon:SlidersHorizontal, keywords:['compress','reduce','optimize','size'], seoTitle:'Free Image Compressor Online | ToolNova', seoDescription:'Compress JPG, PNG and WebP images locally in your browser with adjustable quality.' },
+  { id:'image-resizer', name:'Image Resizer', slug:'image-resizer', category:'Images', description:'Resize an image to exact pixel dimensions in seconds.', icon:Maximize2, keywords:['resize','scale','dimensions'], seoTitle:'Free Image Resizer Online | ToolNova', seoDescription:'Resize images to exact dimensions in your browser. Fast, private and free.' },
+  { id:'jpg-to-png', name:'JPG to PNG', slug:'jpg-to-png', category:'Images', description:'Convert JPG photos to transparent-ready PNG files.', icon:Image, keywords:['convert','jpeg','png'], seoTitle:'Convert JPG to PNG Online | ToolNova', seoDescription:'Turn JPG images into PNG files with one browser-side conversion.' },
+  { id:'png-to-jpg', name:'PNG to JPG', slug:'png-to-jpg', category:'Images', description:'Convert PNG images to compact JPG files with quality control.', icon:RefreshCw, keywords:['convert','jpeg','jpg'], seoTitle:'Convert PNG to JPG Online | ToolNova', seoDescription:'Convert PNG images to JPG format locally with adjustable quality.' },
+  { id:'image-cropper', name:'Image Cropper', slug:'image-cropper', category:'Images', description:'Trim an image to a clean, custom rectangle.', icon:Crop, keywords:['crop','trim','cut'], seoTitle:'Free Image Cropper Online | ToolNova', seoDescription:'Crop images in your browser and download the exact selection.' },
+  { id:'webp-converter', name:'WebP Converter', slug:'webp-converter', category:'Images', description:'Make lightweight WebP images from JPG or PNG originals.', icon:Image, keywords:['webp','convert','optimize'], seoTitle:'JPG PNG to WebP Converter | ToolNova', seoDescription:'Convert JPG and PNG images to WebP with adjustable quality.' },
+  { id:'image-to-base64', name:'Image to Base64', slug:'image-to-base64', category:'Images', description:'Turn an image into a ready-to-use Base64 data URL.', icon:Binary, keywords:['data url','encode','developer'], seoTitle:'Image to Base64 Converter | ToolNova', seoDescription:'Convert images to Base64 data URLs locally and copy or download the result.' },
+  { id:'qr-code-generator', name:'QR Code Generator', slug:'qr-code-generator', category:'Images', description:'Create a downloadable QR code from text or a URL.', icon:QrCode, keywords:['qr','barcode','url'], seoTitle:'Free QR Code Generator | ToolNova', seoDescription:'Generate and download QR codes for text and links without an account.' },
+  { id:'pdf-merger', name:'PDF Merger', slug:'pdf-merger', category:'PDF', description:'Combine several PDF files into one ordered document.', icon:Files, keywords:['merge','combine','join'], seoTitle:'Merge PDF Files Online | ToolNova', seoDescription:'Merge multiple PDFs privately in your browser and download one document.' },
+  { id:'pdf-splitter', name:'PDF Splitter', slug:'pdf-splitter', category:'PDF', description:'Extract a page range from a PDF into a new file.', icon:FileOutput, keywords:['split','pages','range'], seoTitle:'Split PDF Online | ToolNova', seoDescription:'Split a PDF by page range directly in your browser.' },
+  { id:'pdf-to-jpg', name:'PDF to JPG', slug:'pdf-to-jpg', category:'PDF', description:'Export selected PDF pages as downloadable JPG previews.', icon:ScanLine, keywords:['convert','image','render'], seoTitle:'Convert PDF to JPG Online | ToolNova', seoDescription:'Convert PDF pages to JPG images in your browser.' },
+  { id:'jpg-to-pdf', name:'JPG to PDF', slug:'jpg-to-pdf', category:'PDF', description:'Bundle one or more images into a tidy PDF.', icon:FileOutput, keywords:['convert','images','document'], seoTitle:'JPG to PDF Converter | ToolNova', seoDescription:'Create a PDF from multiple JPG, PNG or WebP images locally.' },
+  { id:'pdf-page-extractor', name:'PDF Page Extractor', slug:'pdf-page-extractor', category:'PDF', description:'Choose specific pages and save them as a new PDF.', icon:FileText, keywords:['extract','pages','select'], seoTitle:'Extract PDF Pages Online | ToolNova', seoDescription:'Extract selected pages from a PDF without uploading your file.' },
+  { id:'word-counter', name:'Word Counter', slug:'word-counter', category:'Text', description:'Count words, characters, sentences and reading time live.', icon:Type, keywords:['count','writing','characters'], seoTitle:'Free Word Counter Online | ToolNova', seoDescription:'Count words, characters, sentences and reading time as you type.' },
+  { id:'case-converter', name:'Case Converter', slug:'case-converter', category:'Text', description:'Switch text between uppercase, lowercase, title and sentence case.', icon:Type, keywords:['uppercase','lowercase','title'], seoTitle:'Free Case Converter | ToolNova', seoDescription:'Convert text case instantly with uppercase, lowercase and title case modes.' },
+  { id:'remove-duplicate-lines', name:'Remove Duplicate Lines', slug:'remove-duplicate-lines', category:'Text', description:'Deduplicate lists while preserving the original order.', icon:FileText, keywords:['dedupe','unique','list'], seoTitle:'Remove Duplicate Lines Online | ToolNova', seoDescription:'Remove duplicate lines from text while preserving order.' },
+  { id:'text-to-slug', name:'Text to Slug', slug:'text-to-slug', category:'Text', description:'Create clean, URL-friendly slugs from any phrase.', icon:Type, keywords:['url','permalink','seo'], seoTitle:'Text to Slug Converter | ToolNova', seoDescription:'Turn a title or phrase into a clean URL slug instantly.' },
+  { id:'password-generator', name:'Password Generator', slug:'password-generator', category:'Text', description:'Generate strong passwords with browser cryptography.', icon:KeyRound, keywords:['secure','random','security'], seoTitle:'Secure Password Generator | ToolNova', seoDescription:'Generate strong random passwords securely in your browser.' },
+  { id:'json-formatter', name:'JSON Formatter', slug:'json-formatter', category:'Developer', description:'Validate, format and minify JSON with useful errors.', icon:FileJson, keywords:['json','format','validate','minify'], seoTitle:'JSON Formatter and Validator | ToolNova', seoDescription:'Format, minify and validate JSON with clear browser-side feedback.' },
+  { id:'base64-encoder-decoder', name:'Base64 Encoder / Decoder', slug:'base64-encoder-decoder', category:'Developer', description:'Encode or decode Unicode text as Base64 safely.', icon:Braces, keywords:['base64','encode','decode','unicode'], seoTitle:'Base64 Encoder and Decoder | ToolNova', seoDescription:'Encode and decode Unicode text with Base64 in your browser.' },
+];
+
+export const categories = ['Images', 'PDF', 'Text', 'Developer'] as const;
+export const getTool = (slug?: string) => tools.find((tool) => tool.slug === slug);
+export const searchTools = (query: string) => {
+  const q = query.trim().toLowerCase();
+  if (!q) return tools;
+  return tools.filter((tool) => [tool.name, tool.description, tool.category, ...tool.keywords].join(' ').toLowerCase().includes(q));
+};

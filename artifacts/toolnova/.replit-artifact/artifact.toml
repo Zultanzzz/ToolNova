@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ToolNova"
+description = "A fast, privacy-focused online tools platform with browser-based image, PDF, text, and developer utilities for everyone."
+version = "1.0.0"
+id = "artifacts/toolnova"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20162
+
+[services.development]
+run = "pnpm --filter @workspace/toolnova run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/toolnova", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/toolnova/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20162"
+BASE_PATH = "/"

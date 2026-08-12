@@ -1,6 +1,6 @@
-# [Project name]
+# ToolNova
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+ToolNova is a browser-first online tools platform for fast image, PDF, text, and developer utilities without accounts or file uploads.
 
 ## Run & Operate
 
@@ -22,23 +22,31 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/toolnova/src/data/tools.ts` — centralized registry for the 20 implemented tools, categories, metadata, and related-tool discovery.
+- `artifacts/toolnova/src/App.tsx` — client-side routing, shared shell, homepage, discovery pages, tool pages, and legal/support pages.
+- `artifacts/toolnova/src/components/toolnova-ui.tsx` — reusable file upload, tool card, SEO, privacy, and ad-slot primitives.
+- `artifacts/toolnova/public/` — generated crawl assets including `sitemap.xml` and `robots.txt`.
+- `artifacts/toolnova/src/index.css` — ToolNova visual tokens, light/dark themes, and shared utility styling.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- File and text utilities process locally in the browser by default so user content does not need to leave the device.
+- Tool discovery and route metadata are registry-driven so new tools can be added without duplicating navigation, cards, search, or SEO wiring.
+- PDF and QR dependencies are loaded as focused client-side capabilities rather than introducing a backend or database for the first version.
+- The app uses a shared page structure for tool routes: breadcrumb, focused interface, privacy note, supporting content, FAQ, and related tools.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+ToolNova provides 20 working browser tools across Images, PDF, Text, and Developer categories. It includes client-side downloads, accessible file upload flows, fast global search, responsive navigation, persistent dark mode, SEO metadata, structured data, and future-ready ad-slot placeholders.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+No additional preferences recorded.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- ToolNova is intentionally frontend-only for the first version; do not introduce authentication, a database, or server-side file storage for browser utilities unless the product scope changes.
+- When adding a new tool, update the registry first and keep its route, metadata, UI component, related-tool behavior, and sitemap generation aligned.
 
 ## Pointers
 
