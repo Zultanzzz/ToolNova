@@ -1,7 +1,7 @@
 import type { LucideIcon } from 'lucide-react';
-import { FileJson, FileOutput, FileText, Image, KeyRound, QrCode, ScanLine, SlidersHorizontal, Type, Braces, Files, Crop, RefreshCw, Maximize2, Binary } from 'lucide-react';
+import { FileJson, FileOutput, FileText, Image, KeyRound, QrCode, ScanLine, SlidersHorizontal, Type, Braces, Files, Crop, RefreshCw, Maximize2, Binary, Video } from 'lucide-react';
 
-export type ToolCategory = 'Images' | 'PDF' | 'Text' | 'Developer';
+export type ToolCategory = 'Images' | 'PDF' | 'Text' | 'Developer' | 'Video';
 export type Tool = {
   id: string; name: string; slug: string; category: ToolCategory; description: string;
   icon: LucideIcon; keywords: string[]; seoTitle: string; seoDescription: string;
@@ -28,9 +28,10 @@ export const tools: Tool[] = [
   { id:'password-generator', name:'Password Generator', slug:'password-generator', category:'Text', description:'Generate strong passwords with browser cryptography.', icon:KeyRound, keywords:['secure','random','security'], seoTitle:'Secure Password Generator | ToolNova', seoDescription:'Generate strong random passwords securely in your browser.' },
   { id:'json-formatter', name:'JSON Formatter', slug:'json-formatter', category:'Developer', description:'Validate, format and minify JSON with useful errors.', icon:FileJson, keywords:['json','format','validate','minify'], seoTitle:'JSON Formatter and Validator | ToolNova', seoDescription:'Format, minify and validate JSON with clear browser-side feedback.' },
   { id:'base64-encoder-decoder', name:'Base64 Encoder / Decoder', slug:'base64-encoder-decoder', category:'Developer', description:'Encode or decode Unicode text as Base64 safely.', icon:Braces, keywords:['base64','encode','decode','unicode'], seoTitle:'Base64 Encoder and Decoder | ToolNova', seoDescription:'Encode and decode Unicode text with Base64 in your browser.' },
+  { id:'video-format-converter', name:'Video Format Converter', slug:'video-format-converter', category:'Video', description:'Convert video files to browser-supported formats without uploading them.', icon:Video, keywords:['video','convert','format','transcode','webm','mp4'], seoTitle:'Free Video Format Converter Online | ToolNova', seoDescription:'Convert videos locally in your browser to supported WebM or MP4 formats. No account or upload required.' },
 ];
 
-export const categories = ['Images', 'PDF', 'Text', 'Developer'] as const;
+export const categories = ['Images', 'PDF', 'Text', 'Developer', 'Video'] as const;
 export const getTool = (slug?: string) => tools.find((tool) => tool.slug === slug);
 export const searchTools = (query: string) => {
   const q = query.trim().toLowerCase();

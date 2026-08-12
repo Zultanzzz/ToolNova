@@ -22,7 +22,7 @@ ToolNova is a browser-first online tools platform for fast image, PDF, text, and
 
 ## Where things live
 
-- `artifacts/toolnova/src/data/tools.ts` — centralized registry for the 20 implemented tools, categories, metadata, and related-tool discovery.
+- `artifacts/toolnova/src/data/tools.ts` — centralized registry for the 21 implemented tools, categories, metadata, and related-tool discovery.
 - `artifacts/toolnova/src/App.tsx` — client-side routing, shared shell, homepage, discovery pages, tool pages, and legal/support pages.
 - `artifacts/toolnova/src/components/toolnova-ui.tsx` — reusable file upload, tool card, SEO, privacy, and ad-slot primitives.
 - `artifacts/toolnova/public/` — generated crawl assets including `sitemap.xml` and `robots.txt`.
@@ -37,7 +37,7 @@ ToolNova is a browser-first online tools platform for fast image, PDF, text, and
 
 ## Product
 
-ToolNova provides 20 working browser tools across Images, PDF, Text, and Developer categories. It includes client-side downloads, accessible file upload flows, fast global search, responsive navigation, persistent dark mode, SEO metadata, structured data, and future-ready ad-slot placeholders.
+ToolNova provides 21 working browser tools across Images, PDF, Text, Developer, and Video categories. It includes client-side downloads, accessible file upload flows, fast global search, responsive navigation, persistent dark mode, SEO metadata, structured data, and future-ready ad-slot placeholders.
 
 ## User preferences
 
